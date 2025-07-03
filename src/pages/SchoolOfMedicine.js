@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SchoolOfMedicine.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const features = [
   {
@@ -37,9 +39,13 @@ const features = [
 ];
 
 const SchoolOfMedicine = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="school-container">
-      <div className="school-top">
+      <div className="school-top" data-aos="fade-down">
         <h2>🏥 School of Medicine</h2>
         <p>
           Our School of Medicine is dedicated to excellence in medical education,
@@ -50,7 +56,7 @@ const SchoolOfMedicine = () => {
 
       <div className="features-grid">
         {features.map((f, idx) => (
-          <div key={idx} className="feature-card">
+          <div key={idx} className="feature-card" data-aos="zoom-in" data-aos-delay={idx * 100}>
             <h3>{f.title}</h3>
             <p>{f.description}</p>
           </div>
