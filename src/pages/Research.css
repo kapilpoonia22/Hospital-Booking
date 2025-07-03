@@ -1,0 +1,170 @@
+/* src/components/Research.css */
+
+.research-section {
+  padding: 60px 10%;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.research-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.research-header h1 {
+  font-size: 42px;
+  color: #00796b;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.research-header p {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+  margin: 10px auto;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.research-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.research-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.research-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #004d40;
+}
+
+.research-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.research-left ul li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #333;
+  position: relative;
+  padding-left: 25px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.research-left ul li::before {
+  content: "✔";
+  color: #00796b;
+  position: absolute;
+  left: 0;
+}
+
+.research-left p {
+  font-size: 16px;
+  color: #444;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.research-btn {
+  background: #00796b;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.research-btn:hover {
+  background: #004d40;
+}
+
+.research-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  min-width: 300px;
+}
+
+.research-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: zoomIn 0.8s ease;
+}
+
+.research-box h3 {
+  font-size: 32px;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.research-box p {
+  color: #444;
+  font-size: 15px;
+}
+
+.research-box:hover {
+  transform: translateY(-8px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .research-content {
+    flex-direction: column;
+  }
+
+  .research-header h1 {
+    font-size: 30px;
+  }
+}

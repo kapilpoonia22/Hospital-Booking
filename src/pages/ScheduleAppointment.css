@@ -1,0 +1,88 @@
+/* src/pages/ScheduleAppointment.css */
+.schedule-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.5s ease;
+}
+
+.success-msg {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.schedule-form input,
+.schedule-form select,
+.schedule-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.schedule-form input:focus,
+.schedule-form select:focus,
+.schedule-form textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+}
+
+.schedule-form button {
+  padding: 12px;
+  font-size: 16px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.schedule-form button:hover {
+  background: #005f8a;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 600px) {
+  .schedule-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .schedule-form input,
+  .schedule-form select,
+  .schedule-form textarea {
+    font-size: 14px;
+  }
+}

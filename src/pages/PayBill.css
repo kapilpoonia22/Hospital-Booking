@@ -1,0 +1,44 @@
+.paybill-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.bill-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.bill-form input,
+.bill-form select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.bill-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bill-form button:hover {
+  background-color: #0056b3;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bill-table th,
+.bill-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}

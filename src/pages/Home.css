@@ -1,0 +1,66 @@
+/* src/pages/Home.css */
+
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.doctor-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.doctor-name {
+  margin: 5px 0 3px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.doctor-spec {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 600px) {
+  .doctor-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .doctor-image {
+    height: 120px;
+  }
+}

@@ -1,0 +1,74 @@
+.school-container {
+  padding: 50px 20px;
+  background: #f0f9ff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.school-top {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease;
+}
+
+.school-top h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.school-top p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ✅ Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px 20px;
+  text-align: left;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card h3 {
+  color: #0077b6;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Hover Effects */
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  background: #e0f7fa;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

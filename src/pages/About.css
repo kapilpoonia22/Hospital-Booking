@@ -1,0 +1,101 @@
+.about-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #003366;
+  position: relative;
+}
+
+.about-heading::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #005eb8;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+.about-description {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 94, 184, 0.2);
+}
+
+.about-card h3 {
+  color: #005eb8;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 🔁 Responsive Design */
+@media (max-width: 768px) {
+  .about-card {
+    width: 90%;
+  }
+
+  .about-heading {
+    font-size: 28px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+}
+
+/* 🔄 Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
