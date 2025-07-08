@@ -8,7 +8,7 @@ const FindDoctor = () => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/doctors')
+    fetch('http://hospital-backend-1-nxpm.onrender.com/api/doctors')
       .then(res => res.json())
       .then(data => setDoctors(data))
       .catch(err => console.error('Error fetching doctors:', err));
