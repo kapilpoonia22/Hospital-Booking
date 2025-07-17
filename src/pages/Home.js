@@ -7,11 +7,14 @@ const Home = () => {
   const [doctors, setDoctors] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch('http://hospital-backend-1-nxpm.onrender.com/api/doctors')
-      .then((res) => res.json())
-      .then((data) => setDoctors(data));
-  }, []);
+ useEffect(() => {
+  fetch('https://hospital-backend-1-nxpm.onrender.com/api/doctors')
+    .then((res) => res.json())
+    .then((data) => setDoctors(data))
+    .catch((err) => {
+      console.error("⛔ Failed to fetch:", err);
+    });
+}, []);
 
   const viewProfile = (id) => {
     navigate(`/doctor/${id}`);

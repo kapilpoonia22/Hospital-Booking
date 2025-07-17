@@ -16,7 +16,7 @@ const BookAppointment = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const res = await fetch("http://localhost:8000/api/doctors");
+        const res = await fetch("https://hospital-backend-1-nxpm.onrender.com/api/doctors");
         const data = await res.json();
         setDoctors(data);
       } catch (err) {
@@ -32,7 +32,7 @@ const BookAppointment = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:8000/api/book", {
+    const res = await fetch("https://hospital-backend-1-nxpm.onrender.com/api/book", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

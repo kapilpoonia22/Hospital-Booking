@@ -11,7 +11,7 @@ const DoctorProfile = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
-    fetch(`http://localhost:8000/api/doctors/${id}`)
+    fetch(`https://hospital-backend-1-nxpm.onrender.com/api/doctors/${id}`)
       .then((res) => res.json())
       .then((data) => setDoctor(data));
   }, [id]);

@@ -17,7 +17,7 @@ const ScheduleAppointment = () => {
 
   useEffect(() => {
     // Replace this with actual API endpoint
-    fetch('http://localhost:8000/api/doctors')
+    fetch('https://hospital-backend-1-nxpm.onrender.com/api/doctors')
       .then(res => res.json())
       .then(data => setDoctors(data));
   }, []);
@@ -28,7 +28,7 @@ const ScheduleAppointment = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:8000/api/book', {
+    const res = await fetch('https://hospital-backend-1-nxpm.onrender.com/api/book', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
